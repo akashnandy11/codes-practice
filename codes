@@ -1,0 +1,1074 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+#include <stdlib.h>
+
+// Question 1 FACTORIAL
+// void main()
+// {
+//     int num, i;
+//     int factorial = 1;
+//     printf("Enter a positive integer: ");
+//     scanf("%d", &num);
+//     if (num < 0)
+//     {
+//         printf("Error! Factorial of a negative number doesn't exist.");
+//     }
+//     else
+//     {
+//         for (i = num; i>0; i--)
+//         {
+//             factorial *= i;
+//         }
+//         printf("Factorial of %d = %d", num, factorial);
+//     }
+// }
+
+// Question 2 FIBONACCI
+// void main()
+// {
+//     int num, i, n1 = 0, n2 = 1,n3;
+//     printf("Enter the number of terms: ");
+//     scanf("%d", &num);
+//     printf("Fibonacci Series: ");
+//     for (i = 1; i <= num; ++i)
+//     {
+//         printf("%d, ", n1);
+//         n3 = n1 + n2;
+//         n1 = n2;
+//         n2 = n3;
+//     }
+// }
+
+// 3. Reverse of a Number
+// void main()
+// {
+//     int n;
+//     printf("enter the number you want to reverse:");
+//     scanf("%d",&n);
+//     int rem,rev = 0;
+//     while (n != 0)
+//     {
+//         rem=n%10;
+//         rev = rev * 10 + rem;
+//         n /= 10;
+//     }
+//     printf("the reverse number is::%d",rev);
+// }
+
+// 4. SUM OF DIGITS OF A NUMBER
+//  void main()
+//  {
+//      int n,num1;
+//      printf("enter the number you want the sum of:");
+//      scanf("%d",&n);
+//      int rem,sum = 0;
+//      num1=n;
+//      while (n != 0)
+//      {
+//          rem=n%10;
+//          sum = sum + rem;
+//          n /= 10;
+//      }
+//      printf("the sum of number:%d is::%d",num1,sum);
+//  }
+
+// 6.TABLE OF A NUMBER
+// void main()
+// {
+//     int num,z;
+//     printf("enter the number you want the table of::");
+//     scanf("%d",&num);
+//     for(int i=1;i<=10;i++)
+//     {
+//         printf("\n%d X %d = ",num,i);
+//         z=num*i;
+//         printf("%d",z);
+//     }
+// }
+
+// 5. Find LCM and HCF
+// #include <stdio.h>
+
+// int hcf(int a, int b)
+//{
+//     if (b == 0)
+//         return a;
+//     return hcf(b, a % b);
+// }
+
+// int lcm(int a, int b)
+//{
+//    return (a * b) / hcf(a, b);
+// }
+
+// void main()
+//{
+//     int num1, num2;
+//    printf("Enter two numbers: ");
+//    scanf("%d %d", &num1, &num2);
+//     int HCF = hcf(num1, num2);
+//     int lcm_value = lcm(num1, num2);
+
+//    printf("HCF of %d and %d is: %d\n", num1, num2, hcf);
+//    printf("LCM of %d and %d is: %d\n", num1, num2, lcm_value);
+//}
+
+// 7.CALCULATOR USING SWITCH CASE
+// void main()
+// {
+//     char y='y';
+//     do
+//     {
+//         {
+//             int i,j,k;
+//             printf("enter two no.");
+//             scanf("%d%d",&i,&j);
+//             char q;
+//             printf("operation\n");
+//             scanf (" %c",&q);
+//             switch (q)
+//             {
+//                 case '+':
+//                     printf("%d\n",k=i+j);
+//                     break;
+//                 case '-':
+//                     printf("%d\n",k=i-j);
+//                     break;
+//                 case '*':
+//                     printf("%d\n",k=i*j);
+//                     break;
+//                 case '/':
+//                     if (j==0)
+//                     {
+//                         printf("can't divide by 0\n");
+//                     }
+//                     else
+//                     {
+//                         printf("%d\n",k=i/j);
+//                     }
+//                     break;
+//                 default:
+//                     printf("\nwrong operation");
+//                     break;
+//             }
+//             printf("do you want to continue y or n");
+//             scanf(" %c",&y);
+//         }
+//     }
+//     while (y=='y');
+// }
+
+// 8.SEARCH OF AN ELEMENT
+// void main()
+// {
+//     int arr[100], n, i, key;
+//     printf("Enter the number of elements: ");
+//     scanf("%d", &n);
+//     printf("Enter the elements:\n");
+//     for (i = 0; i < n; i++)
+//     {
+//         scanf("%d", &arr[i]);
+//     }
+//     printf("Enter the element to search: ");
+//     scanf("%d", &key);
+//     for (i = 0; i < n; i++)
+//     {
+//         if (arr[i] == key)
+//         {
+//             printf("%d found at index %d\n", key, i);
+//         }
+//     }
+//          else{
+//             printf("%d not found in the array.\n", key);
+//          }
+//
+// }
+
+// 9 SORTING OF ARRAY
+// void main()
+// {
+//     int a[6]= {12,5,10,9,7,6};
+//     int temp;
+//     int i, j;
+//     printf("Before Sorting ");
+//     for(i=0; i<6; i++)
+//     {
+//         printf("%d ",a[i]);
+//     }
+//     for(i=0; i<6; i++)
+//     {
+//         for(j=i+1; j<6; j++)
+//         {
+//             if(a[i]>a[j])
+//             {
+//                 temp = a[i];
+//                 a[i] = a[j];
+//                 a[j] = temp;
+//             }
+//         }
+//     }
+//     printf("\nAfter Sorting ");
+//     for(i=0; i<6; i++)
+//     {
+//         printf("%d ",a[i]);
+//     }
+// }
+
+// 10.Multiplication of 2d array
+
+// #include <stdio.h>
+
+// void multiply(int first[2][3], int second[3][2], int result[2][2])
+//{
+//     for (int i = 0; i < 2; i++)
+//     {
+//         for (int j = 0; j < 2; j++)
+//         {
+//              result[i][j] = 0;
+//         }
+//     }
+
+//    for (int i = 0; i < 2; i++)
+//    {
+//        for (int j = 0; j < 2; j++)
+//        {
+//            for (int k = 0; k < 3; k++)
+//            {
+//                result[i][j] += first[i][k] * second[k][j];
+//            }
+//        }
+//    }
+//}
+// void transpose(int array[2][2], int transposed[2][2])
+//{
+//   for (int i = 0; i < 2; i++)
+//    {
+//        for (int j = 0; j < 2; j++)
+//        {
+//            transposed[j][i] = array[i][j];
+//        }
+//    }
+//}
+
+// void printArray(int array[2][2])
+//{
+//     for (int i = 0; i < 2; i++)
+//     {
+//         for (int j = 0; j < 2; j++)
+//         {
+//             printf("%d ", array[i][j]);
+//         }
+//         printf("\n");
+//     }
+// }
+
+// void main() {
+//     int first[2][3] = {{1, 2, 3}, {4, 5, 6}};
+//     int second[3][2] = {{7, 8}, {9, 10}, {11, 12}};
+//     int result[2][2];
+//     multiply(first, second, result);
+//     printf("Result of multiplication:\n");
+//     printArray(result);
+//     transpose(result, transposed);
+//     printf("Transposed result:\n");
+//     printArray(transposed);
+// }
+
+// 10.SORT AN ARRAY OF STRING
+// void main()
+// {
+//     char s[3][20]={"micro","soft","amaze"};
+//     int n=3;
+//     char temp[20];
+//     for (int i=0;i<n-1;i++)
+//     {
+//         for (int j=i+1;j<n;j++)
+//         {
+//             if(strcmp(s[i],s[j]))
+//             {
+//                 strcpy(temp,s[i]);
+//                 strcpy(s[i],s[j]);
+//                 strcpy(s[j],temp);
+//             }
+//         }
+//     }
+//     for(int i=0;i<n-1;i++)
+//     {
+//         printf("%s\t",s[i]);
+//     }
+// }
+
+// 11. 2D ARRAY
+// void upper_diagonal();
+// void main()
+// {
+//     int b,c;
+//     int a[2][2]={{1,2},{3,4}};
+//     int m=2,n=2;
+//     upper_diagonal(a,m,n);
+// }
+// void upper_diagonal(int b[2][2],int row,int col)
+// {
+//     for(int i=0 ; i<row ; i++)
+//     {
+//         for(int j=0 ; j<col ; j++)
+//         {
+//             if(i>j)
+//             {
+//                 printf("0\t");
+//             }
+//             else
+//             {
+//                 printf("%d\t",b[i][j]);
+//             }
+//         }
+//         printf("\n");
+//     }
+// }
+
+// void lower_diagonal();
+// void main()
+// {
+//     int b,c;
+//     int a[2][2]={{1,2},{3,4}};
+//     int m=2,n=2;
+//     lower_diagonal(a,m,n);
+// }
+// void lower_diagonal(int b[2][2],int row,int col)
+// {
+//     for(int i=0 ; i<row ; i++)
+//     {
+//         for(int j=0 ; j<col ; j++)
+//         {
+//             if(i<j)
+//             {
+//                 printf("0\t");
+//             }
+//             else
+//             {
+//                 printf("%d\t",b[i][j]);
+//             }
+//         }
+//         printf("\n");
+//     }
+// }
+
+// 12.INSERTION AT A SPECIFIC POINT
+// #include <stdio.h>
+// void main()
+// {
+//     int array[100];
+//     int i, n, x, pos;
+//     printf("Enter the number of elements in the array \n");
+//     scanf("%d", &n);
+//     printf("Enter the elements \n");
+//     for (i = 0; i < n; i++)
+//     {
+//         scanf("%d", &array[i]);
+//     }
+//     printf("Input array elements are: \n");
+//     for (i = 0; i < n; i++)
+//     {
+//         printf("%d ", array[i]);
+//     }
+//     printf("\nEnter the new element to be inserted: ");
+//     scanf("%d", &x);
+//     printf("Enter the position where element is to be inserted: ");
+//     scanf("%d", &pos);
+//     //shift all elements 1 position forward from the place
+//     //where element needs to be inserted
+//     n=n+1;
+//     for(i = n-1; i >= pos; i--)
+//         array[i]=array[i-1];
+//     array[pos-1]=x; //Insert the element x on the specified position
+//     //print the new array
+//     for (i = 0; i < n; i++)
+//     {
+//         printf("%d ", array[i]);
+//     }
+// }
+
+// 13.DELETING ELEMENTS AT A SPECIFIC POINT
+// void main() {
+//     int arr1[50], i, pos, n;
+//     // Prompt user for input
+//     printf("\n\nDelete an element at the desired position from an array:\n");
+//     printf("---------------------------------------------------------\n");
+//     printf("Input the size of the array : ");
+//     scanf("%d", &n);
+//     // Input values for the array
+//     printf("Input %d elements in the array in ascending order:\n", n);
+//     for (i = 0; i < n; i++) {
+//         printf("element - %d : ", i);
+//         scanf("%d", &arr1[i]);
+//     }
+//     // Input the position to delete
+//     printf("\nInput the position where to delete: ");
+//     scanf("%d", &pos);
+//     // Locate the position in the array
+//     i = 0;
+//     while (i != pos - 1)
+//     {
+//         i++;
+//     }
+//     // Shift elements to the left to replace the deleted element
+//     while (i < n)
+//     {
+//         arr1[i] = arr1[i + 1];
+//         i++;
+//     }
+//     n--;
+//     // Display the new list after deletion
+//     printf("\nThe new list is : ");
+//     for (i = 0; i < n; i++)
+//     {
+//         printf("  %d", arr1[i]);
+//     }
+//     printf("\n\n");
+// }
+
+// 15 MAX AND MIN ELEMENTS IN AN ARRAY
+// void main()
+// {
+//     int i, max, min, size;
+//     printf("Enter size of the array: ");
+//     scanf("%d", &size);
+//     int arr[size];
+//     printf("Enter elements in the array: ");
+//     for(i=0; i<size; i++)
+//     {
+//         scanf("%d", &arr[i]);
+//     }
+//     max = arr[0];
+//     min = arr[0];
+//     for(i=1; i<size; i++)
+//     {
+//         if(arr[i] > max)
+//         {
+//             max = arr[i];
+//         }
+//         if(arr[i] < min)
+//         {
+//             min = arr[i];
+//         }
+//     }
+//     printf("Maximum element = %d\n", max);
+//     printf("Minimum element = %d", min);
+// }
+
+// 16.FATORIAL USING RECURSSION
+// int f(int);
+// void main()
+// {
+//     int num,a;
+//     printf("Enter the number you want the factorial of::");
+//     scanf("%d",&num);
+//     a=f(num);
+//     printf("%d",a);
+// }
+// int f(int x)
+// {
+//     if(x==0 || x==1)
+//     {
+//         return 1;
+//     }
+//     return x*f(x-1);
+// }
+
+// 17.FIBONACCI SERIES USING RECURSION
+// int fibonacci(int n)
+// {
+//    if(n == 0)
+//       return 0;
+//    else if(n == 1)
+//       return 1;
+//    else
+//       return (fibonacci(n-1) + fibonacci(n-2));
+// }
+// int main()
+// {
+//    int n;
+//    printf("Enter the number of terms\n");
+//    scanf("%d", &n);
+//    printf("Fibonacci Series: ");
+//    for (int i = 0; i < n; i++)
+//    {
+//       printf("%d ", fibonacci(i));
+//    }
+//    return 0;
+// }
+
+// 18.POWER OF A NUMBER
+// int power(int x,int y);
+// void main()
+// {
+//     int a,b,c;
+//     printf("Enter the number you want the powerof::");
+//     scanf("%d",&a);
+//     printf("enter power::");
+//     scanf("%d",&b);
+//     c=power(a,b);
+//     printf("%d",c);
+// }
+// int power(int x,int y)
+// {
+//     if (y==0)
+//     {
+//         return 1;
+//     }
+//     return x*pow(x,y-1);
+// }
+
+// 20. PRINT ARRAY USING RECURSION
+// void printArray(int arr[],int start,int len1)
+// {
+//     if(start >=len1)
+//         return;
+//     printf("%d, ", arr[start]);
+//     printArray(arr, start + 1,len1);
+// }
+// void main()
+// {
+//     int a[5]={1,2,3,4,5};
+//     printArray(a,0,5);
+// }
+
+// 19.ACKERMAN FUNCTION
+// int ack(int m, int n)
+// {
+// 	if (m == 0){
+// 		return n + 1;
+// 	}
+// 	else if ((m > 0) && (n == 0)){
+// 		return ack(m - 1, 1);
+// 	}
+// 	else if((m > 0) && (n > 0)){
+// 		return ack(m - 1, ack(m, n - 1));
+// 	}
+// }
+// int main()
+// {
+// 	int A;
+// 	A = ack(1,2);
+//     printf("%d",A);
+// 	return 0;
+// }
+
+// 22.SWAP TWO NUMBERS USING CALL BY value
+// void swap(int,int);
+// void main()
+// {
+//     int x,y;
+//     printf("enter two numbers");
+//     scanf("%d%d",&x,&y);
+//     printf("before swap x=%d y=%d\n",x,y);
+//     swap(x,y);
+//     printf("after swap x=%d y=%d\n",x,y);
+// }
+// void swap(int a,int b)
+// {
+//     int z;
+//     z=a;
+//     a=b;
+//     b=z;
+//     printf("the value of x=%d y=%d\n",a,b);
+// }
+
+// 21. CALL BY REFERENCE
+// void swap(int *,int *);
+// void main()
+// {
+//     int x,y;
+//     printf("enter two numbers");
+//     scanf("%d%d",&x,&y);
+//     printf("before swap x=%d y=%d\n",x,y);
+//     swap(&x,&y);
+//     printf("after swap x=%d y=%d\n",x,y);
+// }
+// void swap(int *a,int *b)
+// {
+//     int z;
+//     z=*a;
+//     *a=*b;
+//     *b=z;
+//     printf("the value of x=%d y=%d\n",*a,*b);
+// }
+
+// 23. REVERSE ARRAY
+// void reverseArray(int revarr[],int);
+// void main()
+// {
+//     int a;
+//     printf("How many elements you want in an array");
+//     scanf("%d",&a);
+//     int arr[a];
+//     printf("enter the elements:");
+//     for (int i=0;i<a;i++)
+//     {
+//         scanf("%d",&arr[i]);
+//     }
+//     reverseArray(arr,a);
+// }
+// void reverseArray(int revarr[],int z)
+// {
+//     // int z=sizeof(revarr)/sizeof(revarr[0]);
+//     for (int i=z-1;i>=0;i--)
+//     {
+//         printf("%d\t",revarr[i]);
+//     }
+// }
+
+// 24.COUNT THE GIVEN CHAR IN A STRING
+// void search(char *ptr,char key);
+// void main()
+// {
+//     char key, str[100];
+//     printf("enter the string:");
+//     scanf("%s",&str);
+//     printf("enter the character you want to find occurance of::");
+//     scanf(" %c",&key);
+//     // int len=strlen(str);
+//     search(str,key);
+// }
+// void search(char *ptr,char key)
+// {
+//     int count=0;
+//     // for(int i=0;i<len-1)
+//     while(*ptr!='\0')
+//     {
+//         if (*ptr==key)
+//         {
+//             ++count;
+//         }
+//         ++ptr;
+//     }
+//     printf("the occurance of the character::%c = %d",key,count);
+// }
+
+// 25.implement strlen strcpy strsmp strcat
+
+// 26.SORT A STRING
+// int main (void)
+// {
+//     int n1;
+//     printf("enter the length of the string");
+//     scanf("%d",&n1);
+//     printf("enter the string");
+//     char string[n1];
+//     scanf("%s",&string);
+//     char temp;
+//     int i, j;
+//     int n = strlen(string);
+//     printf("String before sorting - %s \n", string);
+//     for (i = 0; i < n-1; i++)
+//     {
+//         for (j = i+1; j < n; j++)
+//         {
+//             if (string[i] > string[j])
+//                 {
+//                     temp = string[i];
+//                     string[i] = string[j];
+//                     string[j] = temp;
+//                 }
+//         }
+//     }
+//     printf("String after sorting  - %s \n", string);
+//     return 0;
+// }
+
+// 28.ARRAY OF STRUCTURE
+// struct student{
+//     char name[20];
+//     int class;
+//     int rollNo;
+// };
+// int main()
+// {
+//     int n;
+//     printf("Enter the number of students: ");
+//     scanf("%d", &n);
+//     struct student s[n];
+//     for(int i=0; i<n; i++)
+//     {
+//         printf("For student %d\n", i+1);
+//         printf("Enter name: ");
+//         scanf("%s", &s[i].name);
+//         printf("Enter class: ");
+//         scanf("%d", &s[i].class);
+//         printf("Enter roll no.: ");
+//         scanf("%d", &s[i].rollNo);
+//     }
+//     for(int j=0; j<n; j++)
+//     {
+//         printf("Student %d\n", j+1);
+//         printf("Name: %s\n", s[j].name);
+//         printf("Class: %d\n", s[j].class);
+//         printf("Roll Number: %d\n", s[j].rollNo);
+//     }
+//     return 0;
+// }
+// struct Employee
+// {
+//    int id;
+//    char name[20];
+//    struct Date
+//     {
+//       int dd;
+//       int mm;
+//       int yyyy;
+//     }dt;
+// }emp;
+// int main( )
+// {
+//    //storing employee information
+//    emp.id=101;
+//    strcpy(emp.name, "Sonoo Jaiswal");//copying string into char array
+//    emp.dt.dd=10;
+//    emp.dt.mm=11;
+//    emp.dt.yyyy=2014;
+//    //printing first employee information
+//    printf( "employee id : %d\n", emp.id);
+//    printf( "employee name : %s\n", emp.name);
+//    printf( "employee date of joining (dd/mm/yyyy) : %d/%d/%d\n", emp.dt.dd,emp.dt.mm,emp.dt.yyyy);
+//    return 0;
+// }
+
+// 29.ACESSING UNION MEMBERS
+// union student
+// {
+//     char name[20];
+//     int class;
+//     int rollno;
+// };
+// union student s;
+// void main(){
+//     printf("Enter name: ");
+//     scanf("%s", s.name);
+//     printf("\nName: %s\n",s.name);
+//     printf("Enter class: ");
+//     scanf("%d", &s.class);
+//     printf("Class: %d\n",s.class);
+//     printf("Enter roll number: ");
+//     scanf("%d", &s.rollno);
+//     printf("Roll Number: %d\n", s.rollno);
+// }
+
+// 30.Array of pointers and Pointer to Array
+// void main()
+// {
+//     int a[]={10,20,30,40,50};
+//     int *ptr;
+//     int *cpt[5];                //array of pointer
+//     for(int i=0;i<5;i++)
+//     {
+//         cpt[i]=&a[i];
+//     }
+//     ptr =a;                      //pointer to array
+//     printf("%d\t%d",ptr,*ptr);
+//     for(int i=0;i<5;i++)
+//     {
+//         printf("\n%d",*cpt[i]);
+//     }
+// }
+
+// 27.WAP for Dynamic memory Allocation clearly mentioning the role of malloc(), calloc(), realloc() and free().
+// void main()
+// {
+//     int *ptr,*cpt,i,n1,n2;
+//     printf("how many elements you want");
+//     scanf("%d",&n1);
+//     printf("how many elements you want");
+//     scanf("%d",&n2);
+//     ptr=(int*)malloc(n1*sizeof(int));
+//     cpt=(int*)calloc(n2,sizeof(int));
+//     if(ptr==NULL||cpt==NULL)
+//     {
+//         printf("memory not allocated");
+//         exit(0);
+//     }
+//     printf("increase the size of first array");
+//     scanf("%d",&n1);
+//     ptr=(int *)realloc(ptr,n1*sizeof(int));
+//     if(ptr==NULL)
+//     {
+//         printf("memory not allocated");
+//         exit(0);
+//     }
+//     for(i=0;i<n1;i++)
+//     {
+//         ptr[i]=i+1;
+//     }
+//     for(i=0;i<n1;i++)
+//     {
+//         printf("%d\t",ptr[i]);
+//     }
+//     printf("\n");
+//     for(i=0;i<n2;i++)
+//     {
+//         cpt[i]=i+11;
+//     }
+//     for(i=0;i<n2;i++)
+//     {
+//         printf("%d\t",cpt[i]);
+//     }
+//     free(ptr);
+//     free(cpt);
+// }
+
+// 33. Use of break, continue and goto statement.
+// Break Statement
+// #include<stdio.h>
+// void main (){
+//     int i;
+//     for(i = 0; i<10; i++)
+//     {
+//         printf("%d ",i);
+//         if(i == 5)
+//         break;
+//     }
+//     printf("came outside of loop i = %d",i);
+// }
+
+// Continue statement
+// #include <stdio.h>
+// int main(){
+//     for (int i = 1; i <= 10; i++) {
+//         if (i == 5) {
+//             continue;
+//         }
+//         printf("%d ", i);
+//     }
+//     return 0;
+// }
+
+// Goto statement
+// void main()
+// {
+//     int x,y;
+//     for (x=0;x<3;x++)
+//     {
+//         for(y=0;y<3;y++)
+//         {
+//             printf("%d\t%d\n",x,y);
+//             goto out;
+//         }
+//         printf("%d\n",x);
+//     }
+//     out:printf("EXIT");
+// }
+
+// 34. For loop, while loop and do while loop.
+// For loop
+// int main()
+// {
+//     int n;
+//     printf("Enter a number you want to count: ");
+//     scanf("%d", &n);
+//     for(int i=1; i<=n; i++)
+//     {
+//         printf("%d\n", i);
+//     }
+//     return 0;
+// }
+// While loop
+// int main() {
+//     int i = 10;
+//     while (i >= 1) {
+//         printf("%d\n", i);
+//         i--;
+//     }
+//     return 0;
+// }
+// Do while loop
+// int main() {
+//     int i = 1;
+//     do {
+//         printf("%d\n", i);
+//         i++;
+//     } while (i <= 10);
+//     return 0;
+// }
+
+// 35. logical operator, bitwise operator,ternary operator
+// #include <stdio.h>
+
+// void main()
+//{
+//     int a = 5, b = 10;
+//     int logicalResult;
+//     logicalResult = (a < b) && (b > 0);
+//     printf("Logical AND (5 < 10 && 10 > 0): %d\n", logicalResult);
+//     logicalResult = (a > b) || (b > 0);
+//     printf("Logical OR (5 > 10 || 10 > 0): %d\n", logicalResult);
+//     logicalResult = !(a == b);
+//     printf("Logical NOT (!(5 == 10)): %d\n", logicalResult);
+//     int x = 5;
+//     int y = 3;
+//     int bitwiseResult;
+//     bitwiseResult = x & y;
+//     printf("Bitwise AND (5 & 3): %d\n", bitwiseResult);
+//     bitwiseResult = x | y;
+//     printf("Bitwise OR (5 | 3): %d\n", bitwiseResult);
+//     bitwiseResult = x ^ y;
+//     printf("Bitwise XOR (5 ^ 3): %d\n", bitwiseResult);
+//     bitwiseResult = ~x;
+//     printf("Bitwise NOT (~5): %d\n", bitwiseResult);
+//     bitwiseResult = x << 1;
+//     printf("Left Shift (5 << 1): %d\n", bitwiseResult);
+//     bitwiseResult = x >> 1;
+//     printf("Right Shift (5 >> 1): %d\n", bitwiseResult);
+//     int max = (a > b) ? a : b;
+//     printf("Ternary Operator (max of 5 and 10): %d\n", max);
+// }
+
+// 36.Self Referential Structure (Linked List and Trees)
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// struct ListNode
+//{
+//     int data;
+//     struct ListNode* next;
+// };
+
+// struct ListNode* createListNode(int value)
+//{
+//     struct ListNode* newNode = (struct ListNode*)malloc(sizeof(struct ListNode));
+//    newNode->data = value;
+//    newNode->next = NULL;
+//    return newNode;
+//}
+
+// void printLinkedList(struct ListNode* head)
+//{
+//    struct ListNode* current = head;
+//    while (current != NULL) {
+//        printf("%d -> ", current->data);
+//        current = current->next;
+//    }
+//   printf("NULL\n");
+//}
+
+// struct TreeNode
+//{
+//     int data;
+//     struct TreeNode* left;
+//     struct TreeNode* right;
+// };
+
+// struct TreeNode* createTreeNode(int value)
+//{
+//     struct TreeNode* newNode = (struct TreeNode*)malloc(sizeof(struct TreeNode));
+//     newNode->data = value;
+//     newNode->left = NULL;
+//     newNode->right = NULL;
+//     return newNode;
+// }
+//
+// void inorderTraversal(struct TreeNode* root)
+//{
+//   if (root != NULL) {
+//     inorderTraversal(root->left);
+//   printf("%d ", root->data);
+//    inorderTraversal(root->right);
+//}
+//}
+
+// void main()
+//{
+//     struct ListNode* head = createListNode(1);
+//     head->next = createListNode(2);
+//     head->next->next = createListNode(3);
+//     printf("Linked List: ");
+//     printLinkedList(head);
+//     struct TreeNode* root = createTreeNode(1);
+//     root->left = createTreeNode(2);
+//     root->right = createTreeNode(3);
+//     root->left->left = createTreeNode(4);
+//     root->left->right = createTreeNode(5);
+//     printf("Inorder Traversal of Binary Tree: ");
+//     inorderTraversal(root);
+//     printf("\n");
+//     struct ListNode* current = head;
+//     struct ListNode* nextNode;
+//
+//     while (current != NULL)
+//     {
+//         nextNode = current->next;
+//         free(current);
+//         current = nextNode;
+//     }
+// }
+
+// 37. preprocessor directives
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// void printmessage();
+// void calculatecirclearea(double radius);
+
+// int main()
+//{
+//     printmessage();
+//     double radius = 5.0;
+//     calculatecirclearea(radius);
+//     printf("Debug mode is currently disabled.\n");
+//     return 0;
+// }
+// void printmessage()
+//{
+// printf("The Preprocessor Directives Example!\n");
+//}
+
+// void calculatecirclearea(double radius)
+//{
+//     const double PI = 3.14159;
+//     double area = PI * radius * radius;
+//     printf("Area of circle with radius %.2f: %.2f\n", radius, area);
+// }
+
+// 38.String invuilt function
+// #include <stdio.h>
+// #include <string.h>
+
+// void main()
+//{
+//    char str1[100] = "Aman";
+//    char str2[100] = "World";
+//    char str3[100];
+//
+//   printf("Length of str1: %zu\n", strlen(str1));
+//
+//    strcpy(str3, str1);
+//    printf("str3 after strcpy: %s\n", str3);
+//
+//    strcat(str1, str2);
+//    printf("str1 after strcat: %s\n", str1);
+//
+//    int result = strcmp(str1, str2);
+//    if (result == 0)
+//    {
+//        printf("str1 is equal to str2\n");
+//    }
+//    else if (result < 0)
+//    {
+//        printf("str1 is less than str2\n");
+//    }
+//   else
+//   {
+//        printf("str1 is greater than str2\n");
+//    }
+//
+//    char *ptr = strchr(str1, 'a');
+//    if (ptr != NULL)
+//    {
+//        printf("First occurrence of 'a' in str1: %s\n", ptr);
+//    }
+//    else
+//    {
+//        printf("'a' not found in str1\n");
+//    }
+//}
